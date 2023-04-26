@@ -3,11 +3,11 @@
   <title>zhdzb</title>
   
   
-  <link href="http://zhdzb/github.io/atom.xml" rel="self"/>
+  <link href="https://zhdzb.github.io/atom.xml" rel="self"/>
   
-  <link href="http://zhdzb/github.io/"/>
+  <link href="https://zhdzb.github.io/"/>
   <updated>2023-04-26T04:56:49.044Z</updated>
-  <id>http://zhdzb/github.io/</id>
+  <id>https://zhdzb.github.io/</id>
   
   <author>
     <name>z</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://zhdzb/github.io/2023/04/26/hello-world/"/>
-    <id>http://zhdzb/github.io/2023/04/26/hello-world/</id>
+    <link href="https://zhdzb.github.io/2023/04/26/hello-world/"/>
+    <id>https://zhdzb.github.io/2023/04/26/hello-world/</id>
     <published>2023-04-26T04:56:49.044Z</published>
     <updated>2023-04-26T04:56:49.044Z</updated>
     
