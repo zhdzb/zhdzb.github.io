@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"zhdzb.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="对不起，您所访问的页面不存在或者已删除。 您可以点击此处返回首页。        NightTeam">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404 Not Found">
-<meta property="og:url" content="https://zhdzb.github.io/404.html">
+  <meta name="description" content="前言学习vue3拖拽逻辑时，看到了一种watch的用法： 12345678910111213export function watchProps(  props: any,  limits: ReturnType&lt;typeof initLimitSizeAndMethods&gt;) &amp;#123;  const &amp;#123; setWidth, setHeight, setLeft, set">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue中watch的使用">
+<meta property="og:url" content="https://zhdzb.github.io/2022/08/16/vue3%E4%B8%AD%E7%9A%84watch%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="zhdzb">
-<meta property="og:description" content="对不起，您所访问的页面不存在或者已删除。 您可以点击此处返回首页。        NightTeam">
+<meta property="og:description" content="前言学习vue3拖拽逻辑时，看到了一种watch的用法： 12345678910111213export function watchProps(  props: any,  limits: ReturnType&lt;typeof initLimitSizeAndMethods&gt;) &amp;#123;  const &amp;#123; setWidth, setHeight, setLeft, set">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-26T05:20:57.000Z">
-<meta property="article:modified_time" content="2023-04-26T05:21:18.620Z">
+<meta property="article:published_time" content="2022-08-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-20T08:17:53.660Z">
 <meta property="article:author" content="z">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="数据响应">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhdzb.github.io/404">
+<link rel="canonical" href="https://zhdzb.github.io/2022/08/16/vue3%E4%B8%AD%E7%9A%84watch%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -40,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>404 Not Found | zhdzb
-</title>
+  <title>vue中watch的使用 | zhdzb</title>
   
 
 
@@ -175,51 +176,115 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhdzb.github.io/2022/08/16/vue3%E4%B8%AD%E7%9A%84watch%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="z">
+      <meta itemprop="description" content="记录前端学习内容">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhdzb">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vue中watch的使用
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">404 Not Found
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2022-08-16 00:00:00" itemprop="dateCreated datePublished" datetime="2022-08-16T00:00:00+08:00">2022-08-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>415</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习vue3拖拽逻辑时，看到了一种watch的用法：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">watchProps</span>(<span class="params"></span></span><br><span class="line"><span class="params">  props: <span class="built_in">any</span>,</span></span><br><span class="line"><span class="params">  limits: ReturnType&lt;<span class="keyword">typeof</span> initLimitSizeAndMethods&gt;</span></span><br><span class="line"><span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; setWidth, setHeight, setLeft, setTop &#125; = limits;</span><br><span class="line">  <span class="title function_">watch</span>(</span><br><span class="line">    <span class="function">() =&gt;</span> props.<span class="property">w</span>,</span><br><span class="line">    <span class="function">(<span class="params">newVal: <span class="built_in">number</span></span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">setWidth</span>(newVal);</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里watch监听的是一个函数的返回值，而不是直接监听一个变量。这里是为了每次 <code>watch</code> 函数运行时获取属性的最新值。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>watch 监听 的是一个reactive的复杂类型中的某个变量 或者 obj对象中的 某个变量 时 就要是监听一个函数的返回值，如果是一个ref变量，就可以直接监听。</p>
+<h2 id="watch相关"><a href="#watch相关" class="headerlink" title="watch相关"></a>watch相关</h2><p>在 Vue 中，<code>watch</code> 函数接收两个参数：<code>watcher</code> 和 <code>callback</code>。<code>watcher</code> 是一个函数，它返回 <code>watch</code> 函数的依赖值。当依赖值发生变化时，<code>callback</code> 函数会被触发。</p>
+<p>对于响应式属性（通过 <code>ref</code> 或 <code>reactive</code> 创建），Vue 能够自动追踪它们的变化，并在每次变化时触发 <code>watch</code> 回调。但对于非响应式的普通属性，Vue 无法自动追踪其变化。</p>
+<p><strong>通过将属性放在一个函数中返回，并将这个函数作为 <code>watcher</code>，可以在每次运行 <code>watch</code> 函数时获取属性的最新值。</strong>这样，在每次 <code>watch</code> 回调触发时，就能使用最新的属性值进行处理。</p>
+<p>综上所述，将属性放在函数中返回是为了在每次 <code>watch</code> 运行时获取最新值，而不是为了让属性被追踪。如果属性是响应式的，Vue 可以自动追踪其变化；如果属性是非响应式的，需要通过将其放在函数中返回，手动获取最新值。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vue/" rel="tag"># vue</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94/" rel="tag"># 数据响应</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/08/13/%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/" rel="prev" title="样式穿透">
+      <i class="fa fa-chevron-left"></i> 样式穿透
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/08/22/refresh%20token%E7%9A%84%E4%BD%9C%E7%94%A8/" rel="next" title="token和refresh token">
+      token和refresh token <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <center>
-对不起，您所访问的页面不存在或者已删除。
-您可以<a href="#">点击此处</a>返回首页。
-</center>
-
-<blockquote class="blockquote-center">
-    NightTeam
-</blockquote>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -270,6 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch%E7%9B%B8%E5%85%B3"><span class="nav-number">3.</span> <span class="nav-text">watch相关</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
